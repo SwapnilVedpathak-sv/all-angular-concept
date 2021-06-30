@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {HashLocationStrategy, Location, LocationStrategy} from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  location: Location;
+
   title = 'all-angular-concept';
+
+  constructor(location: Location) {
+    this.location = location;
+  }
 }
